@@ -1,4 +1,4 @@
-# About
+### Description
 A mocked version of AirBnB
 
 # Getting Started
