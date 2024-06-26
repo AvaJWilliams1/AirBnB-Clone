@@ -6,7 +6,7 @@ export default function Hero() {
             <img 
                 className="hero--photo" 
                 src="/Users/avawilliams/Documents/React Projects/AirBnB-Clone/images/photo-grid.png"
-                alt="Hero Cars." />
+                alt="Hero Card." />
             <h1 className="hero--header">Online Experiences</h1>
             <p className="hero--text" >Join unique interactive activities led by one-of-a-kind hosts—all without leaving home.</p>
         </section>
