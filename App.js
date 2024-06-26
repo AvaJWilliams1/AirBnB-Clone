@@ -5,10 +5,11 @@ import Card from "./components/Card"
 
 export default function App() {
 
-    // <Hero />
+
     return (
         <div>
             <Navbar />
+            <Hero />
             <Card />
         </div> 
     )

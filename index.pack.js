@@ -415,11 +415,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function App() {
 
-    // <Hero />
     return _react2.default.createElement(
         "div",
         null,
         _react2.default.createElement(_Navbar2.default, null),
+        _react2.default.createElement(_Hero2.default, null),
         _react2.default.createElement(_Card2.default, null)
     );
 }
@@ -511,11 +511,17 @@ function Card() {
     return _react2.default.createElement(
         "div",
         { className: "card" },
-        _react2.default.createElement("img", { src: "/Users/avawilliams/Documents/React Projects/AirBnB-Clone/images/katie-zaferes.png", className: "card--image" }),
+        _react2.default.createElement("img", {
+            src: "/Users/avawilliams/Documents/React Projects/AirBnB-Clone/images/katie-zaferes.png",
+            className: "card--image",
+            alt: "Main card image." }),
         _react2.default.createElement(
             "div",
             { className: "card--stats" },
-            _react2.default.createElement("img", { src: "/Users/avawilliams/Documents/React Projects/AirBnB-Clone/images/star.png", className: "card--star" }),
+            _react2.default.createElement("img", {
+                src: "/Users/avawilliams/Documents/React Projects/AirBnB-Clone/images/star.png",
+                className: "card--star",
+                alt: "Star icon." }),
             _react2.default.createElement(
                 "span",
                 { className: "gray" },
@@ -533,7 +539,7 @@ function Card() {
             )
         ),
         _react2.default.createElement(
-            "p",
+            "h2",
             null,
             "Life Lessons with Katie Zaferes"
         ),
