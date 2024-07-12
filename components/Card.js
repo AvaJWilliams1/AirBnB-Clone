@@ -19,11 +19,11 @@ Notes:
   this data into the component.
 */
 
-export default function Card() {
+export default function Card(props) {
     return (
         <div className="card">
             <img 
-                src="/Users/avawilliams/Documents/React Projects/AirBnB-Clone/images/katie-zaferes.png" 
+                src={`/Users/avawilliams/Documents/React Projects/AirBnB-Clone/images/${props.img}`}
                 className="card--image"
                 alt="Main card image." />
             <div className="card--stats">
@@ -31,12 +31,12 @@ export default function Card() {
                     src="/Users/avawilliams/Documents/React Projects/AirBnB-Clone/images/star.png" 
                     className="card--star"
                     alt="Star icon."/>
-                <span className="gray">5.0</span>
-                <span className="gray">(6) • </span>
-                <span>USA</span>
+                <span className="gray">{props.rating}</span>
+                <span className="gray">({props.reviewCount}) • </span>
+                <span>{props.country}</span>
             </div>
-            <h2>Life Lessons with Katie Zaferes</h2>
-            <p><span className="bold">From $136 </span> / person</p>
+            <h2>{props.title}</h2>
+            <p><span className="bold">From ${props.price} </span> / person</p>
         </div>
     )
 }

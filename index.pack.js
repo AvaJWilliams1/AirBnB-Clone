@@ -415,12 +415,29 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function App() {
 
+    /*
+    Challenge: Pass props to the Card component and display that data
+    - img ("katie-zaferes.png")
+    - rating ("5.0")
+    - reviewCount (6)
+    - country (Whatever you want)
+    - title ("Life Lessons with Katie Zaferes")
+    - price (136)
+    */
+
     return _react2.default.createElement(
         "div",
         null,
         _react2.default.createElement(_Navbar2.default, null),
         _react2.default.createElement(_Hero2.default, null),
-        _react2.default.createElement(_Card2.default, null)
+        _react2.default.createElement(_Card2.default, {
+            img: "katie-zaferes.png",
+            rating: "5.0",
+            reviewCount: 6,
+            country: "USA",
+            title: "Life Lessons with Katie Zaferes",
+            price: 136
+        })
     );
 }
 
@@ -507,12 +524,12 @@ Notes:
   this data into the component.
 */
 
-function Card() {
+function Card(props) {
     return _react2.default.createElement(
         "div",
         { className: "card" },
         _react2.default.createElement("img", {
-            src: "/Users/avawilliams/Documents/React Projects/AirBnB-Clone/images/katie-zaferes.png",
+            src: "/Users/avawilliams/Documents/React Projects/AirBnB-Clone/images/" + props.img,
             className: "card--image",
             alt: "Main card image." }),
         _react2.default.createElement(
@@ -525,23 +542,25 @@ function Card() {
             _react2.default.createElement(
                 "span",
                 { className: "gray" },
-                "5.0"
+                props.rating
             ),
             _react2.default.createElement(
                 "span",
                 { className: "gray" },
-                "(6) \u2022 "
+                "(",
+                props.reviewCount,
+                ") \u2022 "
             ),
             _react2.default.createElement(
                 "span",
                 null,
-                "USA"
+                props.country
             )
         ),
         _react2.default.createElement(
             "h2",
             null,
-            "Life Lessons with Katie Zaferes"
+            props.title
         ),
         _react2.default.createElement(
             "p",
@@ -549,7 +568,9 @@ function Card() {
             _react2.default.createElement(
                 "span",
                 { className: "bold" },
-                "From $136 "
+                "From $",
+                props.price,
+                " "
             ),
             " / person"
         )
@@ -578,7 +599,10 @@ function Hero() {
     return _react2.default.createElement(
         "section",
         { className: "hero" },
-        _react2.default.createElement("img", { className: "hero--photo", src: "/Users/avawilliams/Documents/React Projects/AirBnB-Clone/images/photo-grid.png" }),
+        _react2.default.createElement("img", {
+            className: "hero--photo",
+            src: "/Users/avawilliams/Documents/React Projects/AirBnB-Clone/images/photo-grid.png",
+            alt: "Hero Card." }),
         _react2.default.createElement(
             "h1",
             { className: "hero--header" },
