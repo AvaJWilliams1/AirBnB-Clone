@@ -529,14 +529,14 @@ function Card(props) {
         "div",
         { className: "card" },
         _react2.default.createElement("img", {
-            src: "/Users/avawilliams/Documents/React Projects/AirBnB-Clone/images/" + props.img,
+            src: "images/" + props.img,
             className: "card--image",
             alt: "Main card image." }),
         _react2.default.createElement(
             "div",
             { className: "card--stats" },
             _react2.default.createElement("img", {
-                src: "/Users/avawilliams/Documents/React Projects/AirBnB-Clone/images/star.png",
+                src: "images/star.png",
                 className: "card--star",
                 alt: "Star icon." }),
             _react2.default.createElement(
@@ -601,7 +601,7 @@ function Hero() {
         { className: "hero" },
         _react2.default.createElement("img", {
             className: "hero--photo",
-            src: "/Users/avawilliams/Documents/React Projects/AirBnB-Clone/images/photo-grid.png",
+            src: "images/photo-grid.png",
             alt: "Hero Card." }),
         _react2.default.createElement(
             "h1",

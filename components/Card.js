@@ -23,12 +23,12 @@ export default function Card(props) {
     return (
         <div className="card">
             <img 
-                src={`/Users/avawilliams/Documents/React Projects/AirBnB-Clone/images/${props.img}`}
+                src={`images/${props.img}`}
                 className="card--image"
                 alt="Main card image." />
             <div className="card--stats">
                 <img 
-                    src="/Users/avawilliams/Documents/React Projects/AirBnB-Clone/images/star.png" 
+                    src="images/star.png" 
                     className="card--star"
                     alt="Star icon."/>
                 <span className="gray">{props.rating}</span>
